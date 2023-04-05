@@ -1,0 +1,183 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.explore-Page {
+  .container {
+    position: relative;
+    animation: fadein 1s ease-in-out;
+    transition: all 0.3s ease;
+    header {
+      color: $text-color;
+      font-size: 20px;
+      padding: 20px;
+      position: absolute;
+      top: 0px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 600px;
+      margin: 100px auto;
+      .planet {
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+      .explore-Content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px -50px 50px 0;
+        transition: all 1s ease-in-out;
+        .search-Button {
+          form {
+            position: relative;
+            margin-right: 20px;
+            input {
+              width: 255px;
+            }
+            .fa-light {
+              position: absolute;
+              right: 3px;
+              font-size: 25px;
+              margin: 15px;
+              color: $text-color;
+            }
+          }
+        }
+        .search-Result {
+          position: absolute;
+          top: 130px;
+          right: 215px;
+          border-radius: 15px;
+          width: 300px;
+          height: 400px;
+          background-color: #fff;
+          z-index: 10;
+          a {
+            display: flex;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .others-Notes {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .big-Note {
+            width: 300px;
+            height: 400px;
+            margin-top: 10px;
+            margin-right: 15px;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255, 0.1);
+            border-top: 1px solid rgb(255, 255, 255, 0.5);
+            border-left: 1px solid rgb(255, 255, 255, 0.5);
+            backdrop-filter: blur(3px);
+            overflow: hidden;
+            &:hover {
+              box-shadow: $box-shadow;
+            }
+            .user-thumbnail {
+              display: flex;
+              justify-content: space-between;
+              img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                pointer-events: none;
+              }
+              p {
+                margin-top: 50px;
+                margin-right: 70px;
+                justify-content: center;
+                text-transform: capitalize;
+              }
+            }
+            .user-note {
+              margin-top: 10px;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              color: $text-color;
+              .fa-solid {
+                text-align: right;
+                font-size: 20px;
+                padding: 3px 0;
+                opacity: 0.8;
+                color: $second-color;
+              }
+              p {
+                font-family: $second-font;
+              }
+              .fa-quote-left {
+                text-align: left;
+              }
+              span {
+                position: absolute;
+                bottom: 10px;
+                font-size: 14px;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      display: block;
+      justify-content: center;
+      width: 150px;
+      padding: 20px;
+      background-color: $second-color;
+      color: #fff;
+      margin: -100px auto;
+      border: none;
+      font-family: "Tajawal";
+      font-weight: 500;
+      &:hover {
+        box-shadow: $box-shadow;
+        animation: bouncebtn 1s ease;
+        transform-origin: center bottom;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .explore-Page {
+    .container {
+      header {
+        top: -20px;
+      }
+      .row {
+        .explore-Content {
+          margin-top: 30%;
+          margin-right: 15%;
+          width: 70%;
+          .others-Notes {
+            right: 50px;
+          }
+          .search-Result {
+            margin-top: 10%;
+            margin-right: -18%;
+            height: 410px;
+          }
+        }
+      }
+      button {
+        margin: -95px auto;
+      }
+    }
+  }
+}

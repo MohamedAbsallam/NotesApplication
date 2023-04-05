@@ -1,0 +1,67 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.add-Image {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 1s ease-in-out;
+  .fa-solid {
+    position: absolute;
+    left: 103%;
+    padding: 15px;
+    font-size: 18px;
+    color: $text-color;
+    background-color: $second-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    animation: bounce 1s ease-in-out;
+    box-shadow: -10px 10px 12px $shadow-color, 10px 10px 12px $shadow-color;
+    h3 {
+      color: $text-color;
+      font-size: 18px;
+    }
+    input:hover {
+      box-shadow: none;
+    }
+    button {
+      width: 150px;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .add-Image {
+    left: 25%;
+    .fa-solid {
+      top: -20px;
+      left: 100%;
+      font-size: 12px;
+      border: none;
+      background-color: #fff;
+      z-index: 10;
+    }
+    form {
+      width: 250px;
+      top: -20px;
+      left: 10%;
+    }
+  }
+}

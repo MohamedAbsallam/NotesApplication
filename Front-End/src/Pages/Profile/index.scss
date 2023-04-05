@@ -1,0 +1,135 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.profile-Page {
+  .container {
+    width: 75%;
+    height: 500px;
+    margin: 150px auto;
+    animation: fadein 1s ease-in-out;
+    transition: all 0.3s ease;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      .profile-Image {
+        padding: 10px;
+        img {
+          animation: rotate 1s ease-in-out;
+          border: 1px solid $text-color;
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          box-shadow: $box-shadow;
+        }
+      }
+      .profile-Content {
+        padding: 15px;
+        color: $text-color;
+        overflow: hidden;
+        min-width: 80%;
+        min-height: 100%;
+        header {
+          h2 {
+            text-transform: capitalize;
+          }
+          :nth-child(2) {
+            background-color: #adadad;
+            width: max-content;
+          }
+        }
+        .about-Content {
+          margin-top: 50px;
+          width: 85%;
+          p {
+            :nth-child(1) {
+              background-color: #adadad;
+              width: max-content;
+            }
+            :nth-child(2) {
+              font-family: $second-font;
+              :hover,
+              :active {
+                border: none;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .notes-Archive {
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .row h2 {
+        color: $text-color;
+      }
+      .note-Box {
+        width: 30%;
+      }
+      a {
+        width: 150px;
+        padding: 20px;
+        margin: 50px;
+        background-color: $second-color;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 10px;
+        text-align: center;
+        &:hover {
+          box-shadow: $box-shadow;
+          animation: bouncebtn 1s ease;
+          transform-origin: center bottom;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .profile-Page {
+    .container {
+      margin: 40px auto;
+      .row {
+        justify-content: center;
+        .profile-Image {
+          img {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            box-shadow: -7px 7px 7px rgb(0, 0, 0, 0.3);
+            border: 0.5px solid rgb(0, 0, 0, 0.3);
+          }
+        }
+        .profile-Content {
+          .about-Content {
+            display: none;
+          }
+        }
+      }
+      .notes-Archive {
+        .row {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: -50px;
+          width: 70%;
+          .note-Box {
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            .fa-solid {
+              font-size: 16px;
+              padding: 5px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

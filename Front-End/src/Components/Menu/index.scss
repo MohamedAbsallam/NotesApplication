@@ -1,0 +1,102 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.menu-Bar {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  nav {
+    position: absolute;
+    right: 10px;
+    width: 55px;
+    margin: 120px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    animation: fadein 1s ease-in-out;
+    transition: 0.3s ease;
+    z-index: 10;
+    a {
+      .fa-light {
+        font-size: 25px;
+        color: $text-color;
+        padding: 10px;
+        margin-top: 10px;
+        text-shadow: -5px 5px 5px $shadow-color;
+        &:hover {
+          text-shadow: $box-shadow;
+          color: $second-color;
+        }
+      }
+      &:hover {
+        .tooltip-Text {
+          visibility: visible;
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      color: transparent;
+    }
+    span {
+      margin-top: -50px;
+      padding: 10px;
+    }
+  }
+  nav:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+@media (max-width: 860px) {
+  .menu-Bar {
+    .container {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      nav {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 94vh;
+        left: 0;
+        width: 100%;
+        border-radius: 15px;
+        justify-content: space-around;
+        gap: 0;
+        a {
+          .fa-light {
+            font-size: 25px;
+            color: $text-color;
+            margin-top: 0px;
+            padding: 5px 20px 5px 25px;
+            text-shadow: -5px 5px 5px $shadow-color;
+            &:hover {
+              text-shadow: $box-shadow;
+              color: $second-color;
+            }
+          }
+          .tooltip-Text {
+            display: none;
+          }
+        }
+        hr {
+          display: none;
+        }
+        span {
+          margin: 0;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}

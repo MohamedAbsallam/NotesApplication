@@ -1,0 +1,21 @@
+@use "../../../assets/motions.scss" as *;
+
+.planet-Icon {
+  .container {
+    position: relative;
+    z-index: -10;
+    svg {
+      #planet {
+        animation: spin 1s ease-in-out;
+        transform-box: fill-box;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .planet-Icon .container {
+    display: none;
+  }
+}

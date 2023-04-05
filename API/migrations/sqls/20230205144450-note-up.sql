@@ -1,0 +1,9 @@
+/*Create Table Notes*/
+CREATE TABLE notes(
+    id SERIAL PRIMARY KEY,
+    text VARCHAR(255) NOT NULL,
+    note VARCHAR(1000) NOT NULL,
+    public BOOLEAN NOT NULL,
+    created_date DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);

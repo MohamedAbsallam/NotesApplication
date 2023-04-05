@@ -1,0 +1,28 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.Pagination {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  transition: 0.3s ease-in-out;
+  animation: fadein 1s ease-in-out;
+  p {
+    display: none;
+    position: absolute;
+    left: 10px;
+    color: $text-color;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  p.motion {
+    display: block;
+    animation: movetoRight 1s ease-in-out;
+  }
+}
+
+@media (max-width: 860px) {
+  .Pagination {
+    left: 10px;
+  }
+}

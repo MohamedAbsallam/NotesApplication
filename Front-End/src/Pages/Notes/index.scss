@@ -1,0 +1,121 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.notes-Page {
+  .container {
+    width: 100%;
+    height: 500px;
+    animation: fadein 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    .row {
+      display: flex;
+      align-items: center;
+      margin: 150px auto;
+      height: 500px;
+      position: relative;
+      .box {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        width: 200px;
+        height: 100px;
+        padding: 50px 0;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #fff;
+        .fa-plus {
+          font-size: 30px;
+          color: $text-color;
+          padding: 35px;
+          border: 2px dotted $text-color;
+          border-radius: 50px;
+          text-shadow: 5px 5px 5px $shadow-color;
+          cursor: pointer;
+        }
+        &:hover {
+          box-shadow: $box-shadow;
+        }
+      }
+      .notes {
+        padding: 10px;
+        height: 450px;
+        margin: 100px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        overflow-y: auto;
+        .note-Box {
+          width: 300px;
+          height: 200px;
+          .edit-Note {
+            display: none;
+            text-align: center;
+            span {
+              color: #f00;
+            }
+          }
+          &:hover {
+            .edit-Note {
+              display: block;
+            }
+          }
+        }
+        h2 {
+          color: $text-color;
+        }
+      }
+    }
+    .arrow {
+      position: absolute;
+      top: 75%;
+      left: 49%;
+      color: $text-color;
+      transition: 0.7s ease-in-out;
+      &:hover {
+        .fa-light {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .notes-Page .container {
+    .row {
+      .box {
+        display: flex !important;
+        top: 65vh;
+        left: 5%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: -5px 5px 5px $shadow-color, -2px 2px 2px $shadow-color;
+        z-index: 10;
+        .fa-light {
+          font-size: 22px;
+          color: $text-color;
+          border-radius: 50px;
+          border: none;
+        }
+      }
+      .notes {
+        display: flex !important;
+        padding-top: 10px;
+        margin-top: 25%;
+        height: 74vh;
+      }
+    }
+    .arrow {
+      display: none;
+    }
+  }
+}

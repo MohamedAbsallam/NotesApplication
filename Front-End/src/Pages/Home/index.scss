@@ -1,0 +1,133 @@
+@use "./../../assets/variables.scss" as *;
+@use "./../../assets/motions.scss" as *;
+
+.home-Page {
+  .container {
+    width: 100%;
+    margin: 50px 0;
+    position: relative;
+    transition: all 1s ease;
+    animation: fadein 1s ease-in-out;
+    header {
+      color: $text-color;
+      font-size: 20px;
+      padding: 20px;
+      position: absolute;
+      top: 50px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 600px;
+      margin: 50px 20px;
+      .trending-Notes {
+        margin: 170px 0;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+          color: $text-color;
+          text-align: center;
+          padding: 2px 0;
+          margin: 2px 0;
+        }
+        button {
+          display: block;
+          justify-content: center;
+          width: 150px;
+          padding: 20px;
+          background-color: $second-color;
+          color: #fff;
+          margin: 20px auto;
+          border: none;
+          font-family: "Tajawal";
+          font-weight: 500;
+          &:hover {
+            box-shadow: $box-shadow;
+            animation: bouncebtn 1s ease;
+            transform-origin: center bottom;
+          }
+        }
+      }
+      .todo-List {
+        width: 65%;
+        height: 100%;
+        margin: 160px 0;
+        h2 {
+          color: $text-color;
+          padding: 15px 0;
+        }
+        .input-Todo {
+          form {
+            input {
+              width: 70%;
+              transition: 0.3s ease;
+              &:invalid {
+                animation: none;
+              }
+            }
+            button {
+              margin: 10px;
+              background-color: transparent;
+            }
+          }
+        }
+        .view-Todo {
+          margin-left: 3px;
+          overflow-y: auto;
+          height: 400px;
+          width: 85%;
+          p {
+            font-family: $second-font;
+            color: $text-color;
+            font-size: 18px;
+            width: 95%;
+            padding: 10px 0;
+            border-bottom: 2px dotted $text-color;
+            position: relative;
+            &:hover {
+              span {
+                display: inline-block;
+              }
+            }
+            span {
+              display: none;
+              position: absolute;
+              right: 0;
+              &:active {
+                color: #080;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .home-Page {
+    .container {
+      header {
+        top: 30px;
+      }
+      .row {
+        width: 80%;
+        flex-direction: column;
+        .trending-Notes {
+          display: none;
+          }
+        .todo-List {
+          width: 100%;
+          margin-left: 30px;
+          margin-top: 400px;
+          .view-Todo {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}
