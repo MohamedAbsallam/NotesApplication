@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setLoading } from "./../../REDUX/Slices/users.Slice";
+import { logout, setLoading } from "./../../REDUX/Slices/users.Slice";
 import { trendingNotes } from "./../../Model/notes.Model";
 import Skeleton from "./../../Components/Skeleton";
 import "./index.scss";
@@ -41,6 +41,10 @@ export default function Home() {
         .then((res) => {
           setTrendNotes(res.data.notes);
             dispatch(setLoading(false));
+        })
+        .catch(() => {
+          alert('Error Loading Trending Notes!')
+          // dispatch(logout())
         })
     }, 1000)
   }, []);

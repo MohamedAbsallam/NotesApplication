@@ -40,7 +40,7 @@ export default function Profile() {
       })
       .catch(() => {
         alert(`Error Get Notes`);
-        dispatch(logout())
+        // dispatch(logout())
       });
     setTimeout(() => {
       if (user.image === "" && userId == id) {

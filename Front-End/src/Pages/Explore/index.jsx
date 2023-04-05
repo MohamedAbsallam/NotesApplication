@@ -35,7 +35,7 @@ export default function Explore() {
       })
       .catch(() => {
         alert(`Error Get Notes`);
-        dispatch(logout())
+        // dispatch(logout())
       });
     setMotion("planet");
     setTimeout(() => {

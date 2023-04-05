@@ -50,6 +50,9 @@ export default function Notes() {
     userNotes(userId).then((res) => {
       setNotes(res.data.notes);
     })
+    .catch(() => {
+      alert('Error Loading Notes!')
+    })
   });
 
   return (
