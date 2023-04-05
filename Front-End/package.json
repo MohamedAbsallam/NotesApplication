@@ -1,10 +1,13 @@
 {
+  "homepage": "https://MohamedAbsallam.github.io/NoteApp/Front-End",
   "name": "front-end",
   "version": "1.0.0",
   "description": "New FullStack Note Application",
   "main": "index.js",
   "proxy": "http://localhost:5000",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "starting": "react-scripts start",
     "building": "react-scripts build",
     "formating": "prettier --write src",
@@ -24,6 +27,7 @@
     "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.2",
     "date-fns": "^2.29.3",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
