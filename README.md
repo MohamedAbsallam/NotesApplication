@@ -6,20 +6,14 @@ Notes App is a simple Application users can use to get, create, update and delet
 
 ## Start Back-End
 - `Create Database`
-<!-- Setup DATABASE Connection -->
-PORT=[5000]
-POSTGRES_HOST=[localhost]
-POSTGRES_PORT=[postgres_port]
-POSTGRES_DB=[db-name]
-POSTGRES_DB_TEST=[testdb_name]
-POSTGRES_USER=[db-username]
-POSTGRES_PASSWORD=[db-password]
+
+Create Postgres Database schema and Connect it to the Back-End ['src/Database/index']
 
 - `Start API`
 
 In the project directory, you can run:
-### `npm install`
-### `npm run starting`
+#### `npm install`
+#### `npm run starting`
 
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
@@ -30,7 +24,7 @@ Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 - `Start Front-End`
 
 In the project directory, you can run:
-### `npm run starting`
+#### `npm run starting`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
