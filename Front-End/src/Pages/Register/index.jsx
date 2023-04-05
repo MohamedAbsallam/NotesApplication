@@ -3,7 +3,7 @@ import { createUser } from "./../../Model/users.Model";
 import { addUser, login, setError } from "./../../REDUX/Slices/users.Slice";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import setItems from './../../REDUX/Storage/setItems'
+import setItems from "./../../REDUX/Storage/setItems";
 import Notifi from "./../../Components/Notifi";
 import "./index.scss";
 
@@ -28,11 +28,11 @@ export default function Register() {
     e.preventDefault();
     createUser(user)
       .then((res) => {
-        const user = {...res.data.user}
+        const user = { ...res.data.user };
         dispatch(
           addUser({
             token: user.token,
-            response: user.response
+            response: user.response,
           })
         );
         setNotification(
@@ -42,7 +42,7 @@ export default function Register() {
             message={"You Have Registered Successfully!"}
           />
         );
-        setItems(user)
+        setItems(user);
         setTimeout(() => {
           dispatch(login());
         }, 1000);

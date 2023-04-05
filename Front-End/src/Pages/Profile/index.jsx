@@ -82,7 +82,7 @@ export default function Profile() {
           <div className="row">
             {loading ? (
               <Skeleton />
-            ) : ( notes.length > 0 ?
+            ) : notes.length > 0 ? (
               notes.map((note, index) => {
                 return (
                   <div className="note-Box" key={index}>
@@ -93,7 +93,9 @@ export default function Profile() {
                   </div>
                 );
               })
-            : <h2>No Notes Yet.</h2>)}
+            ) : (
+              <h2>No Notes Yet.</h2>
+            )}
           </div>
           {id == userId && <Link to="/notes">All Notes</Link>}
         </div>

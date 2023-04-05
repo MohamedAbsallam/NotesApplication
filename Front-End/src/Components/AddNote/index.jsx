@@ -22,7 +22,7 @@ export default function AddNote(props) {
 
   const handleChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value, public: publicNote });
-    const {length} = e.target.value;
+    const { length } = e.target.value;
     if (length > 0) {
       setLettersLength(length);
     } else {

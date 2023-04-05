@@ -40,15 +40,15 @@ export default function Home() {
       trendingNotes()
         .then((res) => {
           setTrendNotes(res.data.notes);
-            dispatch(setLoading(false));
+          dispatch(setLoading(false));
         })
         .catch(() => {
-          alert('Error Loading Trending Notes!')
+          alert("Error Loading Trending Notes!");
           // dispatch(logout())
-        })
-    }, 1000)
+        });
+    }, 1000);
   }, []);
-  
+
   return (
     <div className="home-Page">
       <div className="container">
@@ -59,7 +59,9 @@ export default function Home() {
         <div className="row">
           <div className="trending-Notes">
             <h2>Trending</h2>
-            {loading ? (<Skeleton />) : (
+            {loading ? (
+              <Skeleton />
+            ) : (
               trendNotes.map((trendNote, index) => {
                 return (
                   <div className="note-Box" key={index}>

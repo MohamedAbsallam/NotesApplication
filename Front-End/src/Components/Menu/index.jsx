@@ -32,7 +32,7 @@ export default function Menu() {
             <div className="Tooltip">
               <p className="tooltip-Text">Contact</p>
             </div>
-            </Link>
+          </Link>
           <hr />
           <span>
             <Link to={`/profile/${id}`}>

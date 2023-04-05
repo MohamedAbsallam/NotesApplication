@@ -28,38 +28,38 @@ const usersSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
       (state.userData = action.payload.response),
-      (state.userData.token = action.payload.token);
+        (state.userData.token = action.payload.token);
     },
     update: (state, action) => {
       (state.userData = action.payload.response),
-      (state.userData.token = action.payload.token);
+        (state.userData.token = action.payload.token);
     },
     addImage: (state, action) => {
-      (state.userData.image = action.payload);
+      state.userData.image = action.payload;
     },
     login: (state) => {
-      (state.isLoggedin = true);
+      state.isLoggedin = true;
     },
     logout: (state) => {
       (state.isLoggedin = false),
-      (state.userData = {
-        token: "",
-        id: "",
-        user_name: "",
-        first_name: "",
-        last_name: "",
-        email: "",
-        image: null,
-      }),
-      (state.isLoading = true),
-      (state.error = null),
-      removeItems();
+        (state.userData = {
+          token: "",
+          id: "",
+          user_name: "",
+          first_name: "",
+          last_name: "",
+          email: "",
+          image: null,
+        }),
+        (state.isLoading = true),
+        (state.error = null),
+        removeItems();
     },
     setError: (state, action) => {
-      (state.error = action.payload);
+      state.error = action.payload;
     },
     setLoading: (state, action) => {
-      (state.isLoading = action.payload);
+      state.isLoading = action.payload;
     },
   },
 });

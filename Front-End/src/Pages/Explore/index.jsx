@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import Planet from "./../../Components/Planet";
 import { getNotes } from "./../../Model/notes.Model";
 import { getUser, getUsers } from "./../../Model/users.Model";
-import { logout } from './../../REDUX/Slices/users.Slice'
+import { logout } from "./../../REDUX/Slices/users.Slice";
 import { format, parseISO } from "date-fns";
-import { useDispatch } from 'react-redux'
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./index.scss";
 
@@ -22,16 +22,15 @@ export default function Explore() {
     image: "",
   });
   const [hidden, setHidden] = useState("none");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getNotes()
       .then((res) => {
         setNote(res.data.notes[0]);
-    getUser(res.data.notes[0].user_id)
-      .then((res) => {
-        setUser(res.data.user);
-        })
+        getUser(res.data.notes[0].user_id).then((res) => {
+          setUser(res.data.user);
+        });
       })
       .catch(() => {
         alert(`Error Get Notes`);
@@ -53,7 +52,7 @@ export default function Explore() {
       })
       .catch(() => {
         alert(`Error Get Note`);
-        dispatch(logout())
+        // dispatch(logout())
       });
     setNoteMotion("fadein 0.7s ease-in-out");
     setMotion("planet");
@@ -66,15 +65,15 @@ export default function Explore() {
   const handleChange = (e) => {
     const value = e.target.value;
     setTimeout(() => {
-    getUsers({username: value}).then((res) => {
-      setSearchTerms(res.data.users);
+      getUsers({ username: value }).then((res) => {
+        setSearchTerms(res.data.users);
       });
     }, 1000);
-      if (value.length > 2) {
-        setHidden("block");
-      } else {
-        setHidden("none");
-      }
+    if (value.length > 2) {
+      setHidden("block");
+    } else {
+      setHidden("none");
+    }
   };
 
   const handleSubmit = (e) => {

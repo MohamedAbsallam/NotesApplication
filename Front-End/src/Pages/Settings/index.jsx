@@ -7,7 +7,6 @@ import Notifi from "./../../Components/Notifi";
 import "./index.scss";
 
 export default function Settings() {
-  
   const { id, user_name, first_name, last_name, email, token } = useSelector(
     (state) => state.userData
   );
