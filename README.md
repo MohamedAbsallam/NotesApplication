@@ -9,13 +9,14 @@ Notes App is a simple Application users can use to get, create, update and delet
 <!-- Setup DATABASE Connection -->
 PORT=[5000]
 POSTGRES_HOST=[localhost]
-POSTGRES_PORT=[postgres_password]
+POSTGRES_PORT=[postgres_port]
 POSTGRES_DB=[db-name]
 POSTGRES_DB_TEST=[testdb_name]
 POSTGRES_USER=[db-username]
 POSTGRES_PASSWORD=[db-password]
 
 - `Start API`
+
 In the project directory, you can run:
 ### `npm install`
 ### `npm run starting`
