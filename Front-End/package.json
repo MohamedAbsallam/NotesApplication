@@ -5,8 +5,6 @@
   "main": "index.js",
   "proxy": "http://localhost:5000",
   "scripts": {
-    "predeploy": "npm run building",
-    "deploy": "gh-pages -d build",
     "starting": "react-scripts start",
     "building": "react-scripts build",
     "formating": "prettier --write src",
