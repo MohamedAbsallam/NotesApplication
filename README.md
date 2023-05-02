@@ -4,6 +4,21 @@ Notes App is a simple Application users can use to get, create, update and delet
 [github repo](https://github.com/MohamedAbsallam/notesapp.git) <br/>
 Demo: https://mohamedabsallam.github.io/NotesAppTemplate/
 
+## Features:
+Authenticate Users with JWT authenticate
+Hashing Password with Bcrypt
+user can't access application without authentication
+Custom Style and Motions Library with SASS
+Custom Notification Component
+Custom Pagination Component
+Custom Tooltip for Button Elements
+Custom Skeleton
+404 Not Found Page
+
+##Tools & Technologies:
+Back-End: Typescript, Nodejs, Express, JWT, Bcrypt, Db-migrate, Jasmine, PostgreSQL
+Front-End: React, Redux, React-Router, JSX, Axios, SASS, Font-awesome
+
 
 ## Start Back-End
 - `Create Database`
@@ -19,7 +34,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
  
- ____________________________________________________
+ 
 
 ## Start Front-End
 - `Start Front-End`
