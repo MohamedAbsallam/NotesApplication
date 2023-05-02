@@ -5,18 +5,18 @@ Notes App is a simple Application users can use to get, create, update and delet
 Demo: https://mohamedabsallam.github.io/NotesAppTemplate/
 
 ## Features:
-Authenticate Users with JWT authenticate
-Hashing Password with Bcrypt
-user can't access application without authentication
-Custom Style and Motions Library with SASS
-Custom Notification Component
-Custom Pagination Component
-Custom Tooltip for Button Elements
-Custom Skeleton
-404 Not Found Page
+Authenticate Users with JWT authenticate <br/>
+Hashing Password with Bcrypt <br/>
+user can't access application without authentication <br/>
+Custom Style and Motions Library with SASS <br/>
+Custom Notification Component <br/>
+Custom Pagination Component <br/>
+Custom Tooltip for Button Elements <br/>
+Custom Skeleton <br/>
+404 Not Found Page <br/>
 
 ## Tools & Technologies:
-Back-End: Typescript, Nodejs, Express, JWT, Bcrypt, Db-migrate, Jasmine, PostgreSQL
+Back-End: Typescript, Nodejs, Express, JWT, Bcrypt, Db-migrate, Jasmine, PostgreSQL <br/>
 Front-End: React, Redux, React-Router, JSX, Axios, SASS, Font-awesome
 
 
