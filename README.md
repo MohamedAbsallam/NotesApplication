@@ -15,17 +15,12 @@ Custom Tooltip for Button Elements
 Custom Skeleton
 404 Not Found Page
 
-##Tools & Technologies:
+## Tools & Technologies:
 Back-End: Typescript, Nodejs, Express, JWT, Bcrypt, Db-migrate, Jasmine, PostgreSQL
 Front-End: React, Redux, React-Router, JSX, Axios, SASS, Font-awesome
 
 
 ## Start Back-End
-- `Create Database`
-
-Create Postgres Database schema and Connect it to the Back-End ['src/Database/index']
-
-- `Start API`
 
 In the project directory, you can run:
 #### `npm install`
@@ -34,10 +29,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
  
- 
 
 ## Start Front-End
-- `Start Front-End`
 
 In the project directory, you can run:
 #### `npm run starting`
