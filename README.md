@@ -1,4 +1,4 @@
-# Full-Stack Notes App
+# Notes App
 
 Notes App is a simple Application users can use to get, create, update and delete notes.
 [github repo](https://github.com/MohamedAbsallam/notesapp.git) <br/>
