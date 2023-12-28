@@ -1,8 +1,7 @@
 # Notes App
 
-Notes App is a simple Application users can use to get, create, update and delete notes.
-[github repo](https://github.com/MohamedAbsallam/notesapp.git) <br/>
-Demo: https://mohamedabsallam.github.io/NotesAppTemplate/
+Notes App is a simple Application users can use to get, create, update and delete notes. <br/>
+repo:[github repo](https://github.com/MohamedAbsallam/notesapp.git) <br/>
 
 ## Features:
 Authenticate Users with JWT authenticate <br/>
