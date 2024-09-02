@@ -1,7 +1,7 @@
 # Notes App
 
 ## Notes App is a simple Application users can use to get, create, update and delete notes. <br/>
-## Source: [github repo](https://github.com/MohamedAbsallam/notesapp.git) <br/>
+## Source: [github](https://github.com/MohamedAbsallam/notesapp.git) <br/>
 
 ## Features:
  #### Authenticate Users with JWT authenticate <br/>
