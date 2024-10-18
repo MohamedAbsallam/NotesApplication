@@ -1,6 +1,6 @@
 # Notes App
 
-## Notes App is a simple Application users can use to get, create, update and delete notes. <br/>
+## NotesApp: is aFull-stack web app where users can authenticate, create, edit, and delete notes. Implemented secure authentication with JWT and full CRUD functionality. <br/>
 ## Source: [github](https://github.com/MohamedAbsallam/notesapp.git) <br/>
 
 ## Features:
